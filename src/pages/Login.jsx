@@ -1,5 +1,24 @@
+import { useNavigate } from "react-router-dom";
+import { useAuth } from "../auth/AuthContext";
+
+
 function Login() {
-    return <h2>Login Page</h2>;
+    const { login } = useAuth();
+    const navigate = useNavigate();
+
+    const handleFakeLogin = () => {
+        login({ email: "user@example.com", role: "admin" });
+        navigate("/dashboard");
+    }
+
+    return (
+        <>
+            <h1>Login Page</h1>
+            <button onClick={handleFakeLogin}>
+                Fake Login
+            </button>
+        </>
+    );
 }
 
 export default Login;
