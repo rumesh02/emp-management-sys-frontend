@@ -1,1 +1,2 @@
-# emp-management-sys-frontend
+# React + Vite
+
