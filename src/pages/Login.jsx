@@ -7,7 +7,7 @@ function Login() {
     const navigate = useNavigate();
 
     const handleFakeLogin = () => {
-        login({ email: "user@example.com", role: "admin" });
+        login({ email: "user@example.com", role: "employee" });
         navigate("/dashboard");
     }
 
